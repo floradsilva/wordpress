@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle name="Toolbox for WooCommerce Subscriptions">
+  <domain name="jg-toolbox">
+    <project name="Toolbox for WooCommerce Subscriptions" slug="jg-toolbox">
+      <source>
+        <directory>.</directory>
+      </source>
+      <target>
+        <directory>languages</directory>
+      </target>
+      <template>
+        <file>languages/toolbox-for-woocommerce-subscriptions.pot</file>
+      </template>
+    </project>
+  </domain>
+  <exclude>
+    <directory>tests</directory>
+    <directory>node_modules</directory>
+    <directory>vendor</directory>
+  </exclude>
+</bundle>

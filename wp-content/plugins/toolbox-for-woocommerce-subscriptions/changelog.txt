@@ -1,0 +1,127 @@
+** Toolbox for WC Subscriptions **
+
+2019-09-13 - version 1.4.18
+* Test with Subscriptions 2.6.x
+* Remove deprecated function get_completed_payment_count()
+* Update PHPDoc
+
+2019-07-25 - version 1.4.17
+* Fix: Guard against a fatal error where $gateway is false.
+
+2019-07-18 - version 1.4.16
+* Fix: Remove an erroneous "|| 1" from an if check
+
+2019-07-18 - version 1.4.15
+* Fix - Save Details button on Edit Subscription details page is now translatable
+* New: added gateway feature checks for change date / quantity operations
+
+2019-06-17 - version 1.4.14
+* Fix: Notices for success / error messages as a result of user actions are now translatable.
+* New: Edit Subscription path is now configurable.
+
+2019-04-05 - version 1.4.13
+* New: added composer.json file and included wp i18n as dev dependency
+* Fix: added strings on subscription edit details page to be translatable
+* Fix: replaced the plugin URI with the link to the shop page of the plugin instead of a 404 page on my site
+* Tweak: moved generating POT file from grunt to wp i18n command
+* Tweak: minor code styling changes
+* Tweak: added the vendors directory to ignored dirs in loco.xml
+
+2019-03-25 - version 1.4.12
+* Fix: undefined variable error on skip next payment
+* Fix: Do not show skip next payment date link on subscriptions that are still in trial period
+* Fix: On bulk edit, fix templates so subscription ids are passed correctly in the request
+* Fix: On bulk edit, only change details of selected subscriptions
+* New: Add filters to processing functions to enable custom validation rules
+
+2019-03-19 - version 1.4.11
+* New: Two new action hooks at the end of the ship requests
+
+2018-09-24 - version 1.4.10
+* Tweak: Normalized fetching the last payment date that's used in a nonce verification in skip next payment date.
+* New: Two new action hooks at the end of adding products to existing subscriptions.
+
+2018-09-16 - version 1.4.9
+* New: Loco Translate compatibility
+
+2018-06-25 - version 1.4.8
+* Fix: product type, so simple products can also be added to existing subscriptions
+
+2018-06-25 - version 1.4.7
+* Fix: Product / Subscription variations with blank (Any...) attributes now get added to subscriptions with the chosen attributes recorded
+* Fix: product variation product type is now the correct string
+* Fix: removed an unused javascript variable
+* Tweak: replaced WC_Subscriptions::add_notice with wc_add_notice
+
+2018-05-01 - version 1.4.6
+* New: filter after product quantities are changed: `jgtb_after_change_product_quantities`
+* New: filter after subscription frequency changed: `jgtb_after_change_frequency`
+
+2018-02-26 - version 1.4.5
+* New: filter on add to subscription product type eligibility: now you can filter which product types should even initialise the add to subscription code
+
+2018-01-12 - version 1.4.4
+* Fix: edit subscription details didn't redirect to the view subscription page if change frequency feature was turned off. This is now fixed.
+
+2018-01-08 - version 1.4.3
+* Fix: bulk edit options had ship now / reschedule and ship now / keep options even if those options were turned off. This is now fixed, and they correctly adhere to the settings about their availability
+* Tweak: various code style fixes
+
+2018-01-03 - version 1.4.2
+* Fix: version numbers
+
+2018-01-03 - version 1.4.1
+* Tweak: phpcs linting and translation fixes
+
+2017-11-06 - version 1.4.0
+* New: action hook that fires when next schedule is skipped called "jgtb_after_skip_next_date"
+* New: action hook that fires when next payment date is changed called "jgtb_after_change_next_ship_date"
+* New: filter hook to change the updated date message called "jgtb_date_renewal_successful_message"
+* New: filter hook to change the updated frequency message called "jgtb_frequency_updated_message"
+* New: filter hook to change the new ship date
+
+2017-10-17 - version 1.3.3
+* Fix: default button text for "Ship Now Reschedule" button is now correct
+* Fix: button labels are displaying default option if the option is saved, but the value is empty string
+
+2017-10-05 - version 1.3.2
+* New: two new actions for address changes from the Edit Subscription screen
+
+2017-10-04 - version 1.3.1
+* Fix: an undefined variable was fixed by adding an initial value to it
+
+2017-10-03 - version 1.3.0
+* New: new filter to uh... filter the subscriptions that are available to add to a subscription
+* Tweak: Replaced the letter "V" with "View" on the my subscriptions list
+
+2017-09-21 - version 1.2.4
+* Fix: Plugins -> Add new works correctly again
+
+2017-09-14 - version 1.2.3
+* Tweak: Instead of relying on an unchanged previous version of permalinks, let's refresh with all available data
+
+2017-09-14 - version 1.2.2
+* Fix: Permalinks now save correctly and first load of edit-subscription after options save will be successfull
+
+2017-09-08 - version 1.2.1
+* Tweak: after certain actions, there's a redirect to get trid of query args
+* Tweak: filter to control whether the end date is also moved when the next date is changed
+
+2017-09-08 - version 1.2.0
+* New: end date can be moved if the next payment date is changed. It's behind a filter, turned off by default
+* New: end date can be moved if ship now - reschedule is used. It's behind a filter, turned off by default
+
+2017-08-31 - version 1.1.2
+* Fix: Added missing class usage to namespace
+* Fix: Change next shipping date to be site's timezone instead of GMT
+
+2017-08-30 - version 1.1.1
+* Fix: missing jquery ui datepicker styles added
+
+2017-08-24 - version 1.1.0
+* Fix: button texts now correctly show up
+* New: added controls to fine tune the Edit Details page. Shop owners can now restrict customers from changing the quantity of products and / or the frequency of the subscription.
+* New: added placeholder functionality to button texts. You can now use [date_created], [next_date], [next_date_from_today], [next_date_from_next], [next_date_from_last] and the actual dates will be displayed on the buttons.
+
+2017-08-01 - version 1.0.0
+* initial release
